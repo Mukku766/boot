@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button" onclick="showAlert()" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                    aria-expanded="true" aria-controls="collapseOne">
+                    Accordion Item #1
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <p>This is the content of Panel 1.</p>
+                    <img src="image1.jpg" alt="Image 1">
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" onclick="showAlert()" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Accordion Item #2
+                </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    
+                    <p>This is the content of Panel 2.</p>
+                    <img src="image2.jpg" alt="Image 2">
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button onclick="showAlert()" class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Accordion Item #3
+                </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <p>This is the content of Panel 3.</p>
+                    <img src="image3.jpg" alt="Image 3">
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Bootstrap Alerts</h1>
+
+        <!-- Success Alert -->
+        <div class="alert alert-success" role="alert">
+            This is a success alert. You have successfully completed a task.
+        </div>
+
+        <!-- Warning Alert -->
+        <div class="alert alert-warning" role="alert">
+            This is a warning alert. Be cautious of the potential risks.
+        </div>
+
+        <!-- Danger Alert -->
+        <div class="alert alert-danger" role="alert">
+            This is a danger alert. There is a critical issue that needs attention.
+        </div>
+
+        <button class="btn btn-primary" id="addAlertButton">Add New Alert</button>
+    </div>
+
+    <div class="container">
+        <h1>Bootstrap Badges</h1>
+
+        <!-- Button with Badge -->
+        <button class="btn btn-primary" id="incrementButton">
+            Increment
+            <span class="badge badge-secondary" id="countBadge">0</span>
+        </button>
+    </div>
+
+    <div class="container">
+        <h1>Bootstrap Breadcrumb</h1>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item"><a href="#">Category</a></li>
+                <li class="breadcrumb-item"><a href="#">Subcategory</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Current Page</li>
+            </ol>
+        </nav>
+    </div>
+
+
+    <div class="container">
+        <h1>Bootstrap Buttons</h1>
+        
+        <!-- Primary Button with Icon and Tooltip -->
+        <button class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="This is a primary button">
+            <i class="fas fa-star"></i> Primary
+        </button>
+        
+        <!-- Secondary Button with Icon and Tooltip -->
+        <button class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="This is a secondary button">
+            <i class="fas fa-heart"></i> Secondary
+        </button>
+        
+        <!-- Success Button with Icon and Tooltip -->
+        <button class="btn btn-success" data-toggle="tooltip" data-placement="top" title="This is a success button">
+            <i class="fas fa-check-circle"></i> Success
+        </button>
+        
+        <hr>
+        
+        <!-- Button to Toggle Visibility -->
+        <button class="btn btn-info" id="toggleButton">Toggle Element</button>
+        
+        <!-- Element to Toggle Visibility -->
+        <div id="toggleElement" style="display: none;">
+            <p>This element can be toggled.</p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+        <script>
+            function showAlert() {
+                alert("Accordion Button Clicked");
+            }
+        </script>
+
+    <script>
+    // Function to add a new alert dynamically
+    function addAlert(style, message) {
+        const newAlert = document.createElement('div');
+        newAlert.className = `alert alert-${style}`;
+        newAlert.setAttribute('role', 'alert');
+        newAlert.textContent = message;
+
+        document.body.appendChild(newAlert);
+    }
+
+    // Event listener for the "Add New Alert" button
+    document.getElementById('addAlertButton').addEventListener('click', function() {
+        addAlert('info', 'This is a dynamically added alert.');
+    });
+    </script>
+<script>
+    // Initialize count variable
+    let count = 0;
+
+    // Function to update the badge with the current count
+    function updateBadge() {
+        document.getElementById('countBadge').textContent = count;
+    }
+
+    // Event listener for the "Increment" button
+    document.getElementById('incrementButton').addEventListener('click', function() {
+        // Increment the count and update the badge
+        count++;
+        updateBadge();
+    });
+</script>
+
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    
+    <script>
+        // Initialize tooltips
+        $(document).ready(function(){
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+        
+        // Toggle the visibility of the element when the button is clicked
+        $('#toggleButton').click(function(){
+            $('#toggleElement').toggle();
+        });
+    </script>
+
+</body>
+
+</html>
